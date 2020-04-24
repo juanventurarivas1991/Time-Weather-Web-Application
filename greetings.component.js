@@ -1,19 +1,19 @@
-angular.
-  module('myApp').
-  component('greetings', {
-    template: "<p class='label label-info' {{$scope.greetings}}></p>",
-    controller: function greetingsController() {
-      
-      let numberTime = currentdate.getHours();
 
+var myApp = angular.module('myApp', []);
+
+myApp.component('greetingsComponent', {
+    template: "<p class='label label-info'>{{$ctrl.greetings}}</p>",
+    controller: function GreetingsController($scope, $element, $attrs) {
+      var ctrl = this;
+      var currentdate = new Date();
+      var numberTime = currentdate.getHours();
+   
       if (numberTime <= 3) {
-        this.greetings = "goodnight";    
+        ctrl.greetings = "goodnight";
       }else if(numberTime <= 12){
-        this.greetings = "good morning";    
+        ctrl.greetings = "good morning";
       }else if(numberTime > 12){
-        this.greetings = "good afternoon";
+        ctrl.greetings = "good afternoon";
       }
     }
   });
-
- 

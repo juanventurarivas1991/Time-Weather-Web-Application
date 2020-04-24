@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
-<body ng-app="myapp">
 
-  <div class="container bg-primary img-rounded">
-    <h1>
-      <div class="row">
-        <div class="col-xs-6 text-right">
-          <div  ng-app="myapp" class="label label-info" ng-controller="dateController" >
-            {{date}} 
-          </div> 
-        </div>
+<body>
+  <div ng-app="myApp" class="container bg-primary img-rounded">
+    <div class="row">
+      <div class="col-xs-6 text-right">
+        <date-component></date-component>
       </div>
-      
-      <div class="row">
-        <div class="col-xs-6 text-right">
-          <greetings></greetings>
-          </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 text-right">
+        <greetings-component></greetings-component>
       </div>
-      <div class="row">
-        <div class="col-xs-6  text-right " >
-          <div  ng-app="myapp"  ng-controller="refreshController" ></div>
-          <button class="btn btn-lg  btn-info " ng-click="reloadState()" >Refresh</button>
-        </div>
-          </div> 
-        </div>
-    </h1> 
+    </div>
+    <div class="row">
+      <div class="col-xs-6  text-right ">
+        <refresh-component></refresh-component>
+      </div>
+    </div>
   </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="index.js"></script>
+  <script src="date-controller.js"></script>
+  <script src="greetings-controller.js"></script>
+  <script src="refresh-controller.js"></script>
+
+  <script src="date.component.js"></script>
   <script src="greetings.component.js"></script>
-  <script src="main-controller.js"></script>
+  <script src="refresh.component.js"></script>
 </body>
+
 </html>
