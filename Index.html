@@ -11,41 +11,38 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   
 </head>
-<body>
-
-  <div ng-controller="timeController" ng-app="myapp">
-    {{test}}
-    </div>
+<body ng-app="myapp">
 
   <div class="container bg-primary img-rounded">
     <h1>
       <div class="row">
         <div class="col-xs-6 text-right">
-          <p class="label label-info"  id=date></p>
-        </div>
-        <div class="col-xs-6 text-left">
-          <p class="label label-info"  id=time></p>
-        </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 text-right">
-            <p class="label label-info"   id=greetingMessage>greetings</p>    
-            </div>
-        </div>
-      <div class="row">
-        <div class="col-xs-6  text-right " >
-          <button class="btn btn-lg  btn-info "  onclick="refresh()" >Refresh</button>
+          <div  ng-app="myapp" class="label label-info" ng-controller="dateController" >
+            {{date}} 
+          </div> 
         </div>
       </div>
+      
+      <div class="row">
+        <div class="col-xs-6 text-right">
+          <greetings></greetings>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6  text-right " >
+          <div  ng-app="myapp"  ng-controller="refreshController" ></div>
+          <button class="btn btn-lg  btn-info " ng-click="reloadState()" >Refresh</button>
+        </div>
+          </div> 
+        </div>
     </h1> 
   </div>
 
- 
-  
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="index.js"></script>
-  <script src="js/controllers.js"></script>
+  <script src="greetings.component.js"></script>
+  <script src="main-controller.js"></script>
 </body>
 </html>

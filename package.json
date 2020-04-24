@@ -1,0 +1,31 @@
+{
+  "name": "time-weather-web-application",
+  "version": "1.0.0",
+  "description": "time-weather-app",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "node": "^13.13.0"
+  },
+  "devDependencies": {
+    "angular": "^1.7.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanventurarivas1991/Time-Weather-Web-Application.git"
+  },
+  "keywords": [
+    "time",
+    "weather",
+    "app"
+  ],
+  "author": "juan ventura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanventurarivas1991/Time-Weather-Web-Application/issues"
+  },
+  "homepage": "https://github.com/juanventurarivas1991/Time-Weather-Web-Application#readme"
+}
