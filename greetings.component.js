@@ -1,5 +1,4 @@
 
-var myApp = angular.module('myApp', []);
 
 myApp.component('greetingsComponent', {
     template: "<p class='label label-info'>{{$ctrl.greetings}}</p>",
