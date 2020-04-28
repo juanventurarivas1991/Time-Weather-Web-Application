@@ -1,7 +1,7 @@
 
 
 myApp.component('greetingsComponent', {
-    template: "<p class='label label-info'>{{$ctrl.greetings}}</p>",
+    template: "<p >{{$ctrl.greetings}}</p>",
     controller: function GreetingsController($scope, $element, $attrs) {
       var ctrl = this;
       var currentdate = new Date();

@@ -1,6 +1,6 @@
 
 myApp.component('refreshComponent', {
-    template:"<button class='btn btn-lg  btn-info' ng-click='vm.refresh()' >Refresh </button>",
+    template:"<button class='btn btn-lg  btn-info text-uppercase' ng-click='vm.refresh()' >Refresh </button>",
     controllerAs: 'vm',
     controller: function RefreshController($element, $attrs) {
        vm = this;

@@ -1,0 +1,24 @@
+.main{
+    height: 100%;
+    font-family: 'Monserrat';
+    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.ligth{
+    
+    background-color: #FCFCFC;
+    color: #333333;
+    
+}
+
+.dark{
+   
+    background-color: #333333;
+    color: #B5B5B5;
+    
+}
+

@@ -1,7 +1,6 @@
-var myApp = angular.module('myApp', []);
 
 myApp.component('dateComponent', {
-    template: "<p class='label label-info'>{{$ctrl.date}}</p>",
+    template: "<p >{{$ctrl.date}}</p>",
     controller: function DateController($scope, $element, $attrs) {
       var vm = this;
       var currentdate = new Date();
@@ -16,3 +15,4 @@ myApp.component('dateComponent', {
     }
   });
 
+  
