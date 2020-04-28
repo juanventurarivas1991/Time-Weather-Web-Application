@@ -1,11 +1,8 @@
 
-myApp.controller('themeController', ['$scope', function($scope) {
+myApp.controller('ThemeController', ['$scope', function($scope) {
   
-    function setTheme() {        
         var hours = new Date().getHours();
-        $scope.theme = hours > 15;  
-    }
-    setTheme();
+        $scope.theme = hours > 15? 'light' : 'dark';
 }]);
 
 

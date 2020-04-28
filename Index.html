@@ -11,44 +11,45 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="Styles.css"> 
+
+  <link rel="stylesheet" href="Styles.css">
 
 </head>
 
 <body>
-  
   <div ng-app="myApp" class=" container  text-uppercase font-weight-bold main  ">
-    <div ng-class="container-fluid {setTheme() ? 'light' : 'dark'}">
-    <h1>  
-      <div class="row  ">
-        <div class="col-lg-12 mx-auto ">
-          <date-component></date-component>
-        </div>
+    <div ng-controller="ThemeController">
+      <div ng-class="{'dark': theme, 'light': !theme}">
+        <h1>
+          <div class="row  ">
+            <div class="col-lg-12 mx-auto ">
+              <date-component></date-component>
+            </div>
+          </div>
+          <div class="row  ">
+            <div class="col-lg-12 mx-auto ">
+              <greetings-component></greetings-component>
+            </div>
+          </div>
+          <div class="row  ">
+            <div class="col-lg-12 mx-auto">
+              <weather-component></weather-component>
+            </div>
+          </div>
+          <div class="row  ">
+            <div class="col-lg-12 mx-auto">
+              <refresh-component></refresh-component>
+            </div>
+          </div>
+        </h1>
       </div>
-      <div class="row  ">
-        <div class="col-lg-12 mx-auto ">
-          <greetings-component></greetings-component>
-        </div>
-      </div>
-      <div class="row  ">
-        <div class="col-lg-12 mx-auto">
-          <weather-component></weather-component>
-        </div>
-      </div>
-      <div class="row  ">
-        <div class="col-lg-12 mx-auto">
-          <refresh-component></refresh-component>
-        </div>
-      </div>
-    </h1>
-  </div>
+    </div>
   </div>
 
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script src="utils.js" ></script>
+  <script src="utils.js"></script>
   <script src="theme.js"></script>
   <script src="date.component.js"></script>
   <script src="greetings.component.js"></script>
