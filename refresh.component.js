@@ -1,14 +1,15 @@
 
 myApp.component('refreshComponent', {
-    template:"<button class='btn btn-lg  btn-info text-uppercase' ng-click='vm.refresh()' >Refresh </button>",
+    template:"<p>{{refresh}}</p>",
     controllerAs: 'vm',
     controller: function RefreshController($scope, $element, $attrs) {
        vm = this;
 
       vm.refresh = function(){
-        location.reload();
+       // location.reload();
       }
     }
+//    vm.refresh();
+//    $interval(vm.refresh, 3000);
   });
-
   

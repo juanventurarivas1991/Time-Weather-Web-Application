@@ -7,7 +7,7 @@ myApp.component('weatherComponent', {
         var apikeyWeahter = "b441194a96d8642f1609a75c1441793f";
         var city = "London";
         var controller = $scope;
-        controller.weather = "None";
+        // controller.weather = "None";
 
         weatherService.getIpAddress().then(function(response) {
             return response.ip;
@@ -17,12 +17,9 @@ myApp.component('weatherComponent', {
                     return response.city;
                 })
                 .then(function(city){
-                    console.log(city);
                   weatherService.getWeather(apikeyWeahter, city)
                       .then(function(response) {
-                        console.log(response);  
                         controller.weather = response.weather[0].description;
-                        console.log(controller.weather);
                     })
                 });
       })
